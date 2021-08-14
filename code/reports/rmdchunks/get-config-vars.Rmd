@@ -6,7 +6,7 @@ quantiles <- get_hub_config("forecast_type")$quantiles
 
 # FIXME: this breaks the fact that only changes in the config file should be 
 # necessary to add a new target
-target_variables <- c(Cases = "inc case", Deaths = "inc death")
+target_variables <- c(Cases = "inc case", Deaths = "inc death", Hospitalisations = "inc hosp")
 ```
 
 ## {.unlisted .unnumbered}
