@@ -8,5 +8,9 @@ horizons <- data %>%
 horizons <- horizons[as.integer(horizons) < 5]
 horizons <- horizons[order(as.integer(horizons))]
 
-target_variables <- c(Cases = "inc case", Deaths = "inc death", Hospitalisations = "inc hosp")
+target_variables <- c(
+  Cases = "inc case", 
+  Deaths = "inc death", 
+  Hospitalisations = "inc hosp"
+)
 ```

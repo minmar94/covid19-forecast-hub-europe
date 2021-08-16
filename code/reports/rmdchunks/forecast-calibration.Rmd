@@ -27,9 +27,7 @@ if (nrow(scores) > 0) {
     distinct() %>%
     mutate(horizon = as.integer(horizon),
            range = paste0(range, "% interval"),
-           target_variable = recode_factor(target_variable,
-                                           `inc case` = "Cases",
-                                           `inc death` = "Deaths"),
+           target_variable = forcats::fct_recode(target_variable, !!!target_variables),
            coverage = round(coverage, 2))
 
   hlines <- tibble(range = paste0(ranges, "% interval"),
